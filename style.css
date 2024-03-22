@@ -1,4 +1,60 @@
 body {
     font-family:fantasy;
     text-align: center;
+    color: red
+}
+
+hr {
+    width: 400 px;
+}
+
+#mistakes {
+    color: blue
+}
+
+#game-numbers {
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    margin: 0 auto; 
+}
+    /* Margin 0 auto. This technique is often used to center a block-level element such as a div or a image.
+} */
+
+.board-number{
+    width:45px;
+    height:45px;
+    border:2px solid black;
+
+    /* need numbers */
+    font-size: 15px;
+    justify-content: center;
+    font-family: fantasy;
+    display: flex;
+    font-weight: bold;
+
+}
+#game-board {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex wrap wrap will allow it to move into next line on page */
+    margin: 0 auto;   
+}
+ /* calling it . idv tile to call upon it for js and giving small border and height since it will need to be inside a box */
+.indv-tiles {
+    width:45px;
+    height:45px;
+    border:2px solid yellow;
+
+    /* need numbers */
+    font-size: 15px;
+    justify-content: center;
+    font-family: fantasy;
+    display: flex;
+    font-weight: bold;
+
+    /* font weight is used to bold things */
 }
