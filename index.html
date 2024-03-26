@@ -1,19 +1,49 @@
-<html lang="en">
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John's Sudoku</title>
 
     <link rel="stylesheet" href="style.css">
-    <scritp src="sudoku.js"></scritp>
+    <script src="sudoku.js"></script>
 </head>
 <body>
     <h1>Sudoku</h1>
     <hr>
     <h2 id="mistakes">0</h2> 
-    <!-- gave it an id (mistakes) to grab it in js -->
-    <div id="game-board"></div>
+    //- gave it an id (mistakes) to grab it in js -->
+    <!-- <div id="game-board"></div>
 
     <div id="game-numbers"></div>
+</body>
+</html> -->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tttContainer">
+        <h1>My Tic-Tac-Toe</h1>
+        <div id="boxesContainer">
+            <div boxIndex="0" class="box">x</div>
+            <div boxIndex="1" class="box">o</div>
+            <div boxIndex="2" class="box"></div>
+            <div boxIndex="3" class="box"></div>
+            <div boxIndex="4" class="box"></div>
+            <div boxIndex="5" class="box"></div>
+            <div boxIndex="6" class="box"></div>
+            <div boxIndex="7" class="box"></div>
+            <div boxIndex="8" class="box"></div>
+        </div>
+        <h2 id="playerTurn"></h2>
+        <button id="tryAgain">Try Again</button>
+    </div>
+    <script src ="ttt.js"></script>
 </body>
 </html>
