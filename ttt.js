@@ -25,6 +25,8 @@ let currentPlayer = "X";
 let running = false;
 //switch to true before starting game/did anyway
 let statusText;
+//status text is the text under the board
+
 //need to create all the functions i need to run game below
 //below = forEach box we will add an event listener (event is "click" with a callback of box clicked) to each box (how it supposed to work)
 //below = startOverBtn with event listener on click invokes the try again
@@ -99,13 +101,15 @@ function whoWon() {
         }
     }
     if(gameWon){
-        statusText = `${currentPlayer} won!`;
+        playerTurn.innerHTML = `${currentPlayer} won`;
         running = false;
     }
     //else if there are spaces then tie
     else if(!options.includes("")){
-        statusText = `Tie`;
+        // statusText 
+        playerTurn.innerHTML = `Tie`;
         running = false;
+        // console.log("tie")
     }
     else{
         changeTurn();
@@ -115,8 +119,17 @@ function whoWon() {
 function tryAgain() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
-    statusText.textContent = `${currentPlayer} turn`;
+    // taking options to reset them to empty spaces
+    statusText = `${currentPlayer} turn`;
+    // starts it over with current player being x
     box.forEach(box => box.textContent = "");
+    //for each box we will update it to an empty box
     running= true;
 }
 
+
+
+//make a branch to work on these
+//try to get a scoreboard for x and o (wont fail over it but it will be nice to have) if x when increment x by 1 and if 0 wins increment it by 1
+
+//add music
