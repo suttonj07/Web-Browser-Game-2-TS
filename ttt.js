@@ -26,6 +26,10 @@ let running = false;
 //switch to true before starting game/did anyway
 let statusText;
 //status text is the text under the board
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
 
 //need to create all the functions i need to run game below
 //below = forEach box we will add an event listener (event is "click" with a callback of box clicked) to each box (how it supposed to work)
@@ -127,6 +131,22 @@ function tryAgain() {
     running= true;
 }
 
+//used chat gpt. still need to change names to match mine.
+function updateScoreboard() {
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
+    document.getElementById('ties').textContent = ties;
+  }
+  function updatewhoWon(result) {
+    if (result === 'win') {
+      wins++;
+    } else if (result === 'loss') {
+      losses++;
+    } else if (result === 'tie') {
+      ties++;
+    }
+    updateScoreboard();
+  }
 
 
 //make a branch to work on these
