@@ -120,6 +120,11 @@ function whoWon() {
     }
 }
 
+// function updateStatus() {
+//     currentPlayer = "X";
+//     statusText = `${currentPlayer} turn`;
+// }
+
 function tryAgain() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
@@ -128,10 +133,15 @@ function tryAgain() {
     // starts it over with current player being x
     box.forEach(box => box.textContent = "");
     //for each box we will update it to an empty box
+    // updateStatus();
+//    let currentPlayer = "";
     running= true;
 }
 
+
+
 //used chat gpt. still need to change names to match mine.
+//wouldnt text content be referring to the content within the scoreboard.
 function updateScoreboard() {
     document.getElementById('wins').textContent = wins;
     document.getElementById('losses').textContent = losses;
@@ -148,6 +158,8 @@ function updateScoreboard() {
     updateScoreboard();
   }
 
+
+//   make a read me
 
 //make a branch to work on these
 //try to get a scoreboard for x and o (wont fail over it but it will be nice to have) if x when increment x by 1 and if 0 wins increment it by 1
