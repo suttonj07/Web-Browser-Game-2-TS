@@ -26,11 +26,12 @@ let running = false;
 //switch to true before starting game/did anyway
 let statusText;
 //status text is the text under the board
-let wins = 0;
-let losses = 0;
-let ties = 0;
-
-
+// let wins = 0;
+// let losses = 0;
+// let ties = 0;
+let player1Count = 0
+let player2Count = 0
+let tieCount = 0
 //need to create all the functions i need to run game below
 //below = forEach box we will add an event listener (event is "click" with a callback of box clicked) to each box (how it supposed to work)
 //below = startOverBtn with event listener on click invokes the try again
@@ -107,17 +108,32 @@ function whoWon() {
     if(gameWon){
         playerTurn.innerHTML = `${currentPlayer} won`;
         running = false;
+        if (currentPlayer === "X") {
+            player1Count++ 
+            // console.log(player1Count)
+            updateScoreboard();
+        }
+        if (currentPlayer === "O") {
+            player2Count++ 
+            // console.log(currentPlayer, player2Count, "im hit")
+            updateScoreboard();
+        }
     }
     //else if there are spaces then tie
     else if(!options.includes("")){
         // statusText 
         playerTurn.innerHTML = `Tie`;
         running = false;
+        console.log(playerTurn, "player turn hit")
+        tieCount++
+        updateScoreboard();
+
         // console.log("tie")
     }
     else{
         changeTurn();
     }
+   
 }
 
 // function updateStatus() {
@@ -136,6 +152,7 @@ function tryAgain() {
     // updateStatus();
 //    let currentPlayer = "";
     running= true;
+    playerTurn.innerHTML = `${currentPlayer} turn`;
 }
 
 
@@ -143,20 +160,25 @@ function tryAgain() {
 //used chat gpt. still need to change names to match mine.
 //wouldnt text content be referring to the content within the scoreboard.
 function updateScoreboard() {
-    document.getElementById('wins').textContent = wins;
-    document.getElementById('losses').textContent = losses;
-    document.getElementById('ties').textContent = ties;
+   let p1Score = document.getElementById('p1score');
+   p1Score.innerHTML = player1Count
+   let p2Score = document.getElementById('p2score');
+   p2Score.innerHTML = player2Count
+   let tieScore = document.getElementById('tiescore');
+   tieScore.innerHTML = tieCount
+     // document.getElementById('p2score').textContent = playerO;
+    // document.getElementById('tiescore').textContent = ties;
   }
-  function updatewhoWon(result) {
-    if (result === 'win') {
-      wins++;
-    } else if (result === 'loss') {
-      losses++;
-    } else if (result === 'tie') {
-      ties++;
-    }
-    updateScoreboard();
-  }
+//   function updatewhoWon(result) {
+//     if (result === 'p1score') {
+//       playerX++;
+//     } else if (result === 'p2score') {
+//       playerO++;
+//     } else if (result === 'tie') {
+//       ties++;
+//     }
+//     updateScoreboard();
+//   }
 
 
 //   make a read me
