@@ -1,4 +1,4 @@
-**Web-Based Tic-Tac-Toe**
+**Web-Based Tic-Tac-Toe:**
 
 This is a simple Tic-Tac-Toe game that runs in the borwser and is built entirely using HTML, CSS, and JS.
 <hr>
