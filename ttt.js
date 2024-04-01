@@ -16,6 +16,7 @@ const winConditions = [
         [2, 5, 8],
         [2, 4, 6]
 ];
+
 // need an array of how to actually win. boxes go left to right starting with 0
 
 let options = ["", "", "", "", "", "", "", "", ""]
