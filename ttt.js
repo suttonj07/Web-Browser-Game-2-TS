@@ -69,15 +69,15 @@ function changeTurn() {
     currentPlayer = (currentPlayer === "X") ? "O" : "X"; 
     // make current player be x otherwise go back to o
     // statusText = `${currentPlayer} turn`;
-    console.log(playerTurn)
-   console.log(currentPlayer, "currentPlayer")
+//     console.log(playerTurn)
+//    console.log(currentPlayer, "currentPlayer")
     if(currentPlayer === "O"){
         playerTurn.innerHTML = `${currentPlayer} turn`;
-        console.log(playerTurn)
+        // console.log(playerTurn)
     }else{
         currentPlayer === "X"
-            playerTurn.innerHTML = `${currentPlayer} turn`;
-            console.log(playerTurn)
+        playerTurn.innerHTML = `${currentPlayer} turn`;
+            // console.log(playerTurn)
     }
     
 }
@@ -96,7 +96,7 @@ function whoWon() {
         const cellC = options[condition[2]];
 //if cell a equals empty or cell b equals empty or c equals empty then continue.
         if(cellA == "" || cellB == "" || cellC == ""){
-            continue;
+          continue;
         }
         //if a b and c are equal then winner
         if(cellA == cellB && cellB == cellC){
