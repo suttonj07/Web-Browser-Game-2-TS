@@ -46,7 +46,7 @@ function updateBox(box, index ) {
 
 function changeTurn() {
     currentPlayer = (currentPlayer === "X") ? "O" : "X"; 
-    // Making the current player x, if not, go back to o.
+    // Making the current player "x", if not, go back to "o".
 
     if(currentPlayer === "O"){
         playerTurn.innerHTML = `${currentPlayer} turn`;
