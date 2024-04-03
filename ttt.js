@@ -42,7 +42,6 @@ function boxClicked() {
 function updateBox(box, index ) {
     options[index] = currentPlayer;
     box.textContent = currentPlayer;
-
 }
 
 function changeTurn() {
@@ -55,7 +54,6 @@ function changeTurn() {
     }else{
         currentPlayer === "X"
         playerTurn.innerHTML = `${currentPlayer} turn`;
-      
     }
 }
 
