@@ -17,7 +17,7 @@ Hope you enjoy.
 
 ## **How to Run:**
 
-Open the terminal. Type in start index.html and it will open up in your browser.
+Fork and clone the respository. Open the terminal. Type in "start index.html" and it will open up in your browser.
 
 <hr>
 
