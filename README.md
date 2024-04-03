@@ -15,6 +15,10 @@ Hope you enjoy.
 
 <hr>
 
+##**How to Run:**
+
+Open the terminal. Type in start index.html and it will open up in your browser.
+
 <hr>
 
 ## **Author:**
