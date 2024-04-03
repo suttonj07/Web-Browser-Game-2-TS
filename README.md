@@ -15,6 +15,12 @@ Hope you enjoy.
 
 <hr>
 
+## **How to Run:**
+
+Fork and clone the respository. Open the terminal. Type in "start index.html" and it will open up in your browser.
+
+<hr>
+
 ## **Author:**
 
 John Sutton 
