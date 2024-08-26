@@ -1,0 +1,20 @@
+@mixin font-style($family, $size, $color: inherit) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin center($type: grid) {
+    display: $type;
+    margin: auto;
+    @if $type == grid {
+        place-items: center;
+    } @else if $type == flex {
+        justify-content: center;
+        align-items: center;
+    }
+}

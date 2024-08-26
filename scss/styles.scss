@@ -1,0 +1,48 @@
+@import 'mixins';
+@import 'variables';
+
+// Variables
+$main-color: #E9967A;
+$box-bg-color: #7B68EE;
+$button-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+$scores-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 20px 0;
+
+// Applying font-style mixin to body
+body {
+    @include font-style(fantasy, 70px, $main-color);
+    text-align: center;
+    cursor: grab;
+}
+
+// Styling for .box class
+.box {
+    width: 120px;
+    height: 120px;
+    border: 2px solid;
+    background-color: $box-bg-color;
+}
+
+// Styling for #boxesContainer with correct font-style usage
+#boxesContainer {
+    @include center(grid);
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    @include font-style('Segoe UI', 16px, $main-color); // Adjusted to 16px for example
+}
+
+// Styling for #startOverBtn with box-shadow mixin
+#startOverBtn {
+    color: red;
+    font-size: 30px;
+    @include box-shadow(0, 12px, 16px, 0, rgba(0, 0, 0, 0.24));
+    @include box-shadow(0, 17px, 50px, 0, rgba(0, 0, 0, 0.19));
+    cursor: grabbing;
+}
+
+// Styling for #scores with box-shadow mixin
+#scores {
+    font-size: 20px;
+    @include box-shadow(0, 10px, 10px, 0, rgba(0, 0, 0, 0.24));
+    @include box-shadow(0, 10px, 20px, 0, rgba(0, 0, 0, 0)); // Ensure color is properly applied
+    white-space: pre;
+}

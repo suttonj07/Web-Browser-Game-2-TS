@@ -1,0 +1,42 @@
+body {
+  font-family: fantasy;
+  font-size: 70px;
+  color: #E9967A;
+  text-align: center;
+  cursor: grab;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  border: 2px solid;
+  background-color: #7B68EE;
+}
+
+#boxesContainer {
+  display: grid;
+  margin: auto;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+  width: 300px;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  color: #E9967A;
+}
+
+#startOverBtn {
+  color: red;
+  font-size: 30px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  cursor: grabbing;
+}
+
+#scores {
+  font-size: 20px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0);
+  white-space: pre;
+}
+
+/*# sourceMappingURL=styles.css.map */
